@@ -8,15 +8,26 @@ spring:
   cloud:
     gateway:
       routes:
+
         - id: zone-service
-          uri: lb://zone-service
+          uri: lb://ZONE-SERVICE
           predicates:
             - Path=/api/zones/**
 
         - id: sensor-service
-          uri: lb://sensor-service
+          uri: lb://SENSOR-SERVICE
           predicates:
             - Path=/api/sensors/**
+
+        - id: automation-service
+          uri: lb://AUTOMATION-SERVICE
+          predicates:
+            - Path=/api/automation/**
+
+        - id: crop-service
+          uri: lb://CROP-SERVICE
+          predicates:
+            - Path=/api/crops/**
 
 eureka:
   client:
