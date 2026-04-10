@@ -1,0 +1,175 @@
+{
+  "info": {
+    "name": "AGMS Microservices Collection",
+    "_postman_id": "12345-abcde-67890",
+    "description": "API testing for AGMS system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+
+    {
+      "name": "Create Zone",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Zone A\",\n  \"minTemp\": 20,\n  \"maxTemp\": 30\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/zones",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "zones"]
+        }
+      }
+    },
+
+    {
+      "name": "Get Zone By ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/zones/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "zones", "1"]
+        }
+      }
+    },
+
+    {
+      "name": "Get Latest Sensor Data",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/sensors/latest",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "sensors", "latest"]
+        }
+      }
+    },
+
+    {
+      "name": "Get Automation Logs",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/automation/logs",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "automation", "logs"]
+        }
+      }
+    },
+
+    {
+      "name": "Create Crop",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Tomato Batch\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/crops",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "crops"]
+        }
+      }
+    },
+
+    {
+      "name": "Get All Crops",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/crops",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "crops"]
+        }
+      }
+    },
+
+    {
+      "name": "Update Crop Status",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer valid-token"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"VEGETATIVE\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/crops/1/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "crops", "1", "status"]
+        }
+      }
+    }
+
+  ]
+}
