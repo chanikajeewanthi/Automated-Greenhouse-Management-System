@@ -127,8 +127,17 @@ postman-collection/AGMS.postman_collection.json
 
 ---
 
-📸 Screenshot
-Eureka Dashboard: docs/eureka-dashboard.png
+📸 Eureka Dashboard
+
+All services are registered and monitored using Eureka.
+
+👉 Access:
+
+http://localhost:8761
+
+📷 Screenshot included in:
+
+docs/eureka-dashboard.png
 
 ## 🧠 Key Features
 
